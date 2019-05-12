@@ -1,0 +1,14 @@
+{% extends "myschedule/base.html" %}
+
+{% block content %}
+    <h1>너의 스케줄이야</h1>
+    <div>
+        <h2>{{post.title}}</h2>
+        <p style="color: red">할 일 : {{post.memo}}</p>
+        <p style="color: red">해야하는 시간 : {{post.schedule_date}}</p>
+        <p>글 올린 시간 : {{post.publisted_date}}</p>
+        <a href="{% url 'home'%}">홈으로</a>
+        <a href="{% url 'edit' post.id %}">수정하기</a>
+        <a href="{% url 'delete' post.id %}">삭제하기</a>
+    </div>
+{% endblock %}

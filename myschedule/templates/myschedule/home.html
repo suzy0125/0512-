@@ -1,0 +1,11 @@
+{% extends "myschedule/base.html" %}
+
+{% block content %}
+    <h1>짜잔~ 스케줄</h1>
+    {% for post in posts.all %}
+        <div>
+            <h2><a href = "{% url 'detail' post.id %}">{{post.title}}</a></h2>
+            <p>{{post.schedule_date}}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
